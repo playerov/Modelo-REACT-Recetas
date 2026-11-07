@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recetario Estrafalario - Tu Cocina Digital</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header-brand">
+          <h1 class="logo">🍳 Recetario Estrafalario</h1>
+          <p class="slogan">Sabor garantizado... o te devolvemos tu dinero</p>
+        </div>
+        <nav class="nav">
+          <button class="nav-btn active" data-page="home">Inicio</button>
+          <button class="nav-btn" data-page="recientes">Recientes</button>
+        </nav>
+      </div>
+    </header>
+
+    <main class="main">
+      <!-- Página Principal -->
+      <section id="home-page" class="page active">
+        <div class="container">
+          <div class="filters">
+            <select id="filter-categoria" class="filter-select">
+              <option value="">Todas las categorías</option>
+            </select>
+            <select id="filter-area" class="filter-select">
+              <option value="">Todas las áreas</option>
+            </select>
+            <input
+              type="text"
+              id="search-input"
+              class="search-input"
+              placeholder="Buscar receta..."
+            />
+          </div>
+
+          <div id="loading" class="loading">Cargando recetas...</div>
+          <div
+            id="error-message"
+            class="error-message"
+            style="display: none"
+          ></div>
+
+          <div id="recetas-container" class="recetas-grid"></div>
+        </div>
+      </section>
+
+      <!-- Página de Recetas Recientes -->
+      <section id="recientes-page" class="page">
+        <div class="container">
+          <h2 class="page-title">Recetas Recientes</h2>
+          <div id="recientes-container" class="recetas-grid">
+            <p class="empty-message">No has visto ninguna receta aún.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Página de Detalles -->
+      <section id="detalle-page" class="page">
+        <div class="container">
+          <button id="back-btn" class="back-btn">← Volver al catálogo</button>
+          <div id="detalle-container"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="slogan-footer">Sabor garantizado... o te devolvemos tu dinero</p>
+        <p>&copy; 2025 Recetario Estrafalario - Tu Cocina Digital</p>
+      </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+  </body>
+</html>
